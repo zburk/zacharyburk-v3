@@ -41,7 +41,7 @@
         </div>
         <div class="lg:w-1/3 pt-24 lg:pt-0" @click="selectCard">
           <Card
-            :title="'Web Development'"
+            :title="'Investing'"
             :img-name="'undraw_investing_7u74'">
           </Card>
         </div>
@@ -52,7 +52,7 @@
       <p class="text-right pr-10 text-gray-300">&copy; 2019 Zachary Burk</p>
     </div>
 
-    <modal name="contact-modal" height="375px">
+    <modal name="contact-modal" height="auto">
       <ContactForm v-on:cancel="$modal.hide('contact-modal')"/>
     </modal>
   </div>

@@ -13,6 +13,7 @@
           <input
             v-model="formData.contact"
             placeholder="How should I contact you?" />
+            <span class=" pl-2 text-xs text-gray-600">Enter your email, phone number, etc</span>
         </div>
 
         <div class="form-control">
