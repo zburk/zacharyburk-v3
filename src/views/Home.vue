@@ -19,12 +19,14 @@
         <div class="lg:w-1/3" @click="selectCard">
           <Card
             :title="'Dental School'"
+            :description="'Hoping to attend dental school? I\'d love to work with you to efficiently strengthen your application or plan your journey to dental school.'"
             :img-name="'undraw_medicine_b1ol'">
           </Card>
         </div>
         <div class="lg:w-1/3 pt-24 lg:pt-0" @click="selectCard">
           <Card
             :title="'Web Development'"
+            :description="'Looking to launch a new website for a startup or personal blog? Check out my portfolio and reach out to me for a quote if you\'d like to start your online presence.'"
             :img-name="'undraw_experience_design_eq3j'">
           </Card>
         </div>
@@ -36,12 +38,14 @@
         <div class="lg:w-1/3" @click="selectCard">
           <Card
             :title="'Credit Cards'"
+            :description="'Maximize every dollar you spend. Credit card companies offer ludicrous bonuses to redeem for cash back or memorable travel experiences.'"
             :img-name="'undraw_credit_card_df1m'">
           </Card>
         </div>
         <div class="lg:w-1/3 pt-24 lg:pt-0" @click="selectCard">
           <Card
             :title="'Investing'"
+            :description="'Learn about my investing philosophy and how I target a stable portfolio without sacrificing growth.'"
             :img-name="'undraw_investing_7u74'">
           </Card>
         </div>
