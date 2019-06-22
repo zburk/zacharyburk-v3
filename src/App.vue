@@ -9,4 +9,11 @@
 </template>
 
 <style>
+  a:hover {
+    @apply underline
+  }
+
+  p {
+    @apply text-gray-700
+  }
 </style>

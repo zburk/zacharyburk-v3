@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="flex h-screen items-center flex-col md:flex-row justify-center bg-slant w-full">
+    <header class="flex h-screen items-center flex-col md:flex-row justify-center bg-slant w-full sun-mobile">
       <div class="mt-16 md:-mt-16 mr-16 flex-1 w-full text-right">
         <h1 class="header-text">Dental Student</h1>
         <h2 class="sub-text">By day</h2>
@@ -16,14 +16,14 @@
       <h1 class="text-center font-bold text-5xl">How Can I Help You?</h1>
 
       <div class="flex flex-col lg:flex-row items-center justify-around pt-24 pb-24 lg:items-stretch">
-        <div class="lg:w-1/3" @click="selectCard">
+        <div class="lg:w-1/3" @click="selectCard('dental')">
           <Card
             :title="'Dental School'"
             :description="'Hoping to attend dental school? I\'d love to work with you to efficiently strengthen your application or plan your journey to dental school.'"
             :img-name="'undraw_medicine_b1ol'">
           </Card>
         </div>
-        <div class="lg:w-1/3 pt-24 lg:pt-0" @click="selectCard">
+        <div class="lg:w-1/3 pt-24 lg:pt-0" @click="selectCard('web')">
           <Card
             :title="'Web Development'"
             :description="'Looking to launch a new website for a startup or personal blog? Check out my portfolio and reach out to me for a quote if you\'d like to start your online presence.'"
@@ -35,14 +35,14 @@
 
     <div class="bg-gray-100 py-24">
       <div class="flex flex-col lg:flex-row items-center justify-around pt-24 pb-24 lg:items-stretch">
-        <div class="lg:w-1/3" @click="selectCard">
+        <div class="lg:w-1/3" @click="selectCard('credit')">
           <Card
             :title="'Credit Cards'"
             :description="'Maximize every dollar you spend. Credit card companies offer ludicrous bonuses to redeem for cash back or memorable travel experiences.'"
             :img-name="'undraw_credit_card_df1m'">
           </Card>
         </div>
-        <div class="lg:w-1/3 pt-24 lg:pt-0" @click="selectCard">
+        <div class="lg:w-1/3 pt-24 lg:pt-0" @click="selectCard('invest')">
           <Card
             :title="'Investing'"
             :description="'Learn about my investing philosophy and how I target a stable portfolio without sacrificing growth.'"
@@ -57,7 +57,9 @@
     </div>
 
     <modal name="contact-modal" height="auto">
-      <ContactForm v-on:cancel="$modal.hide('contact-modal')"/>
+      <ContactForm
+        :type="type"
+        v-on:cancel="$modal.hide('contact-modal')"/>
     </modal>
   </div>
 </template>
@@ -70,8 +72,14 @@ import ContactForm from '@/components/ContactForm.vue'
 export default {
   name: 'home',
   components: { Card, ContactForm },
+  data() {
+    return {
+      type: ''
+    }
+  },
   methods: {
-    selectCard() {
+    selectCard(type) {
+      this.type = type;
       this.$modal.show('contact-modal');
     }
   }
@@ -91,6 +99,13 @@ export default {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
   }
 
+  .sun-mobile {
+      background-image: url('../assets/svg/undraw_air_support_wy1q.svg');
+      background-repeat: no-repeat;
+      background-position: left 25px top 25px;
+      background-size: 35%;
+  }
+
   .lighthouse-mobile {
       background-image: url('../assets/svg/undraw_light_the_fire_gt58.svg');
       background-repeat: no-repeat;
@@ -99,12 +114,12 @@ export default {
   }
 
   @media (min-width: 768px) {
-    .lighthouse-mobile {background: none}
+    .lighthouse-mobile, .sun-mobile {background: none}
     .bg-slant {
-        background-image: url('../assets/svg/undraw_light_the_fire_gt58.svg'), url('../assets/svg/Path 204.svg');
-        background-repeat: no-repeat, no-repeat;
-        background-position: right bottom, right;
-        background-size: 250px, 55% 100%;
+        background-image: url('../assets/svg/undraw_light_the_fire_gt58.svg'), url('../assets/svg/Path 204.svg'), url('../assets/svg/undraw_air_support_wy1q.svg');
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-position: right bottom, right, left 25px top 25px;
+        background-size: 250px, 55% 100%, 35%;
     }
   }
 
