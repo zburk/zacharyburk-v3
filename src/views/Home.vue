@@ -19,13 +19,13 @@
         <div class="lg:w-1/3">
           <Card
             :title="'Dental School'"
-            :img-name="'undraw_medicine_b1ol.svg'">
+            :img-name="'undraw_medicine_b1ol'">
           </Card>
         </div>
         <div class="lg:w-1/3 pt-24 lg:pt-0">
           <Card
             :title="'Web Development'"
-            :img-name="'undraw_experience_design_eq3j.svg'">
+            :img-name="'undraw_experience_design_eq3j'">
           </Card>
         </div>
       </div>
@@ -36,13 +36,13 @@
         <div class="lg:w-1/3">
           <Card
             :title="'Credit Cards'"
-            :img-name="'undraw_credit_card_df1m.svg'">
+            :img-name="'undraw_credit_card_df1m'">
           </Card>
         </div>
         <div class="lg:w-1/3 pt-24 lg:pt-0">
           <Card
             :title="'Web Development'"
-            :img-name="'undraw_investing_7u74.svg'">
+            :img-name="'undraw_investing_7u74'">
           </Card>
         </div>
       </div>

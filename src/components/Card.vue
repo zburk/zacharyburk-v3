@@ -1,7 +1,8 @@
 <template>
   <div class="shadow-lg max-w-sm w-full lg:max-w-full lg:flex bg-white border-gray-400 rounded card h-full">
-    <div class="h-48 lg:h-auto lg:w-48 flex flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden bg-white" title="Woman holding a mug">
-      <img :src="require(`@/assets/svg/${imgName}`)" class="p-4">
+    <div class="h-48 lg:h-auto lg:w-48 flex flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden bg-white relative" title="Woman holding a mug">
+      <img :src="require(`@/assets/svg/${imgName}.svg`)" class="p-4 color">
+      <img :src="require(`@/assets/svg/${imgName}_grayscale.svg`)" class="p-4 grayscale">
     </div>
     <div class="p-4 flex flex-col justify-between leading-normal">
       <div class="mb-8">
@@ -26,7 +27,39 @@ export default {
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
   }
 
-  .card:hover {
-    @apply -mt-3 shadow-xl cursor-pointer
+  @media (min-width: 1024px) {
+    img.color {
+      position: absolute;
+      top: 15%;
+      -webkit-transition: all 0.5s ease-out;
+      -moz-transition: all 0.5s ease-out;
+      -o-transition: all 0.5s ease-out;
+      -ms-transition: all 0.5s ease-out;
+      transition: all 0.5s ease-out;
+      opacity: 0;
+      z-index: 10;
+    }
+
+    img.grayscale {
+      opacity: 1;
+      position: absolute;
+      left: 0;
+      top: 15%;
+    }
+
+    .card:hover {
+      @apply -mt-3 shadow-xl cursor-pointer
+    }
+
+    .card:hover img.color {
+      -webkit-transition: all 0.5s ease-in;
+      -moz-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in;
+      -ms-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in;
+      display: block;
+      opacity: 1;
+    }
   }
+
 </style>
