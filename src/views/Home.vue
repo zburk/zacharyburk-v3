@@ -16,13 +16,13 @@
       <h1 class="text-center font-bold text-5xl">How Can I Help You?</h1>
 
       <div class="flex flex-col lg:flex-row items-center justify-around pt-24 pb-24 lg:items-stretch">
-        <div class="lg:w-1/3">
+        <div class="lg:w-1/3" @click="selectCard">
           <Card
             :title="'Dental School'"
             :img-name="'undraw_medicine_b1ol'">
           </Card>
         </div>
-        <div class="lg:w-1/3 pt-24 lg:pt-0">
+        <div class="lg:w-1/3 pt-24 lg:pt-0" @click="selectCard">
           <Card
             :title="'Web Development'"
             :img-name="'undraw_experience_design_eq3j'">
@@ -33,13 +33,13 @@
 
     <div class="bg-gray-100 py-24">
       <div class="flex flex-col lg:flex-row items-center justify-around pt-24 pb-24 lg:items-stretch">
-        <div class="lg:w-1/3">
+        <div class="lg:w-1/3" @click="selectCard">
           <Card
             :title="'Credit Cards'"
             :img-name="'undraw_credit_card_df1m'">
           </Card>
         </div>
-        <div class="lg:w-1/3 pt-24 lg:pt-0">
+        <div class="lg:w-1/3 pt-24 lg:pt-0" @click="selectCard">
           <Card
             :title="'Web Development'"
             :img-name="'undraw_investing_7u74'">
@@ -51,16 +51,26 @@
     <div class="bg-gray-800 py-6">
       <p class="text-right pr-10 text-gray-300">&copy; 2019 Zachary Burk</p>
     </div>
+
+    <modal name="contact-modal" height="375px">
+      <ContactForm v-on:cancel="$modal.hide('contact-modal')"/>
+    </modal>
   </div>
 </template>
 
 <script scoped>
 // @ is an alias to /src
 import Card from '@/components/Card.vue'
+import ContactForm from '@/components/ContactForm.vue'
 
 export default {
   name: 'home',
-  components: { Card }
+  components: { Card, ContactForm },
+  methods: {
+    selectCard() {
+      this.$modal.show('contact-modal');
+    }
+  }
 }
 </script>
 
