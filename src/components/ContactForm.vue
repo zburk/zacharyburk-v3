@@ -10,15 +10,15 @@
           </p>
 
           <p v-if="type === 'web'">
-            The portfolio page is still under construction. However, check out LinkedIn to see projects
+            The portfolio page is still under construction. However, check out <a href="https://www.linkedin.com/in/zburk/" target="_blank">LinkedIn</a> to see projects
             that I have worked on. If you have any questions, feel free to fill out the from below
             and I'll get in touch with you ASAP.
           </p>
 
           <p v-if="type === 'credit'">
             I'm still putting together information regarding credit cards, but check out this
-            <a href="https://docs.google.com/document/d/1-q1zpM6Tpm2WYzss72erAGYATlHWh6SCEVErXcwYrkA/edit?usp=sharing">document</a>
-            covering the basics of credit card bonuses! I also recommend checking out <a href="https://www.asksebby.com/">Ask Sebby</a> for more info.
+            <a href="https://docs.google.com/document/d/1-q1zpM6Tpm2WYzss72erAGYATlHWh6SCEVErXcwYrkA/edit?usp=sharing" target="_blank">document</a>
+            covering the basics of credit card bonuses! I also recommend checking out <a href="https://www.asksebby.com/" target="_blank">Ask Sebby</a> for more info.
           </p>
 
           <div class="form-control">

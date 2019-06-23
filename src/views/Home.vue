@@ -15,7 +15,7 @@
     <div class="light-blue-bg py-24">
       <h1 class="text-center font-bold text-5xl">How Can I Help You?</h1>
 
-      <div class="flex flex-col lg:flex-row items-center justify-around pt-24 pb-24 lg:items-stretch">
+      <div class="flex flex-col lg:flex-row items-center justify-around pt-24 pb-24 lg:items-stretch pl-4 pr-4 lg:pl-0 lg:pr-0">
         <div class="lg:w-1/3" @click="selectCard('dental')">
           <Card
             :title="'Dental School'"
@@ -34,7 +34,7 @@
     </div>
 
     <div class="bg-gray-100 py-24">
-      <div class="flex flex-col lg:flex-row items-center justify-around pt-24 pb-24 lg:items-stretch">
+      <div class="flex flex-col lg:flex-row items-center justify-around pt-24 pb-24 lg:items-stretch pl-4 pr-4 lg:pl-0 lg:pr-0">
         <div class="lg:w-1/3" @click="selectCard('credit')">
           <Card
             :title="'Credit Cards'"
@@ -56,7 +56,7 @@
       <p class="text-right pr-10 text-gray-300">&copy; 2019 Zachary Burk</p>
     </div>
 
-    <modal name="contact-modal" height="auto" v-show="showModal">
+    <modal name="contact-modal" width="75%" height="auto" v-show="showModal">
       <ContactForm
         :type="type"
         v-on:cancel="$modal.hide('contact-modal')"/>
