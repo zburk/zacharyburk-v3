@@ -41,6 +41,8 @@
             </textarea>
           </div>
 
+          <input type="hidden" name="form-name" value="contact-form" />
+
           <p class="hidden">
             <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
           </p>
