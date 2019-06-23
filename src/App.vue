@@ -16,4 +16,8 @@
   p {
     @apply text-gray-700
   }
+
+  body {
+    @apply m-0
+  }
 </style>
