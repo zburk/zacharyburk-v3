@@ -24,12 +24,14 @@
           <div class="form-control">
             <input
               v-model="formData.name"
+              name="name"
               placeholder="What's your name?" />
           </div>
 
           <div class="form-control">
             <input
               v-model="formData.contact"
+              name="contact-method"
               placeholder="How should I contact you?" />
               <span class=" pl-2 text-xs text-gray-600">Enter your email, phone number, etc</span>
           </div>
@@ -37,6 +39,7 @@
           <div class="form-control">
             <textarea
               v-model="formData.message"
+              name="message"
               placeholder="Send me some info!">
             </textarea>
           </div>
