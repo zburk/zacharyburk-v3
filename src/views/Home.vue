@@ -56,7 +56,7 @@
       <p class="text-right pr-10 text-gray-300">&copy; 2019 Zachary Burk</p>
     </div>
 
-    <modal name="contact-modal" height="auto">
+    <modal name="contact-modal" height="auto" v-show="showModal">
       <ContactForm
         :type="type"
         v-on:cancel="$modal.hide('contact-modal')"/>
@@ -72,13 +72,18 @@ import ContactForm from '@/components/ContactForm.vue'
 export default {
   name: 'home',
   components: { Card, ContactForm },
+  mounted() {
+    this.$modal.show('contact-modal');
+  },
   data() {
     return {
-      type: ''
+      type: '',
+      showModal: false
     }
   },
   methods: {
     selectCard(type) {
+      this.showModal = true;
       this.type = type;
       this.$modal.show('contact-modal');
     }
