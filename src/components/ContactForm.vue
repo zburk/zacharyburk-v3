@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form autocomplete="off" method="POST" netlify>
+    <form autocomplete="off" method="POST" netlify netlify-honeypot="bot-field">
       <div class="p-8">
         <h1 class="text-gray-900 font-bold text-xl mb-2">Contact</h1>
           <p v-if="type === 'dental'">
@@ -40,6 +40,10 @@
               placeholder="Send me some info!">
             </textarea>
           </div>
+
+          <p class="hidden">
+            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+          </p>
       </div>
       <div class="bg-gray-200 p-4 text-right">
         <button
