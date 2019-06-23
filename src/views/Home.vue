@@ -52,8 +52,9 @@
       </div>
     </div>
 
-    <div class="bg-gray-800 py-6">
-      <p class="text-right pr-10 text-gray-300">&copy; 2019 Zachary Burk</p>
+    <div class="bg-gray-800 py-6 flex justify-between">
+      <span class="pl-10 text-gray-300">Designed using <a href="https://vuejs.org/" target="_blank">Vue</a> and <a href="https://tailwindcss.com/" target="_blank">Tailwind</a></span>
+      <span class="pr-10 text-gray-300">&copy; 2019 Zachary Burk</span>
     </div>
 
     <modal name="contact-modal" width="75%" height="auto" v-show="showModal">
@@ -92,6 +93,10 @@ export default {
 </script>
 
 <style>
+  a {
+    @apply text-blue-400 !important
+  }
+
   .header-text {
     @apply text-5xl font-bold italic
   }
