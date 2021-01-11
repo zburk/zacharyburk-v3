@@ -3,7 +3,8 @@ module.exports = {
     prerenderSpa: {
       registry: undefined,
       renderRoutes: [
-        '/'
+        '/',
+        '/privacy-policy'
       ],
       useRenderEvent: true,
       headless: true,
