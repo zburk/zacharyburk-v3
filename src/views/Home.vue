@@ -54,7 +54,7 @@
 
     <div class="bg-gray-800 py-6 flex justify-between">
       <span class="pl-10 text-gray-300">Designed with <a href="https://vuejs.org/" target="_blank">Vue</a> and <a href="https://tailwindcss.com/" target="_blank">Tailwind</a></span>
-      <span class="pr-10 text-gray-300">&copy; 2019 Zachary Burk</span>
+      <span class="pr-10 text-gray-300">&copy; 2021 Zachary Burk</span>
     </div>
 
     <modal name="contact-modal" width="75%" height="auto" v-show="showModal">
