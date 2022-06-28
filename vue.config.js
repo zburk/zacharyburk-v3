@@ -4,7 +4,8 @@ module.exports = {
       registry: undefined,
       renderRoutes: [
         '/',
-        '/privacy-policy'
+        '/privacy-policy',
+        '/links',
       ],
       useRenderEvent: true,
       headless: true,
