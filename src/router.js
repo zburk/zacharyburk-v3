@@ -24,6 +24,11 @@ export default new Router({
       path: '/privacy-policy',
       name: 'privacyPolicy',
       component: () => import(/* webpackChunkName: "privacy" */ './views/PrivacyPolicy.vue')
+    },
+    {
+      path: '/links',
+      name: 'links',
+      component: () => import(/* webpackChunkName: "privacy" */ './views/Links.vue')
     }
   ]
 })
