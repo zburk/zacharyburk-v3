@@ -28,7 +28,7 @@ export default new Router({
     {
       path: '/links',
       name: 'links',
-      component: () => import(/* webpackChunkName: "privacy" */ './views/Links.vue')
+      component: () => import(/* webpackChunkName: "links" */ './views/Links.vue')
     }
   ]
 })
